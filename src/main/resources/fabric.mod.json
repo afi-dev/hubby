@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "hubby",
+  "version": "${version}",
+  "name": "Hubby",
+  "description": "Hubby adds a full set of commands to manage spawns, hubs and lobbies on a Fabric server, including /hub, /sethub, /lobby, /setlobby, /spawn and /setspawn.",
+  "authors": ["afidev"],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/hubby",
+    "sources": "https://github.com/afi-dev/hubby"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/hubby/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.afidev.hubby.Hubby"],
+    "client": ["com.afidev.hubby.HubbyClient"]
+  },
+  "mixins": [
+    "hubby.mixins.json",
+    {
+      "config": "hubby.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.5",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*",
+    "luckperms": "*"
+  }
+}

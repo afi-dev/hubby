@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "com.afidev.hubby.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": ["HubbyMixin"],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
